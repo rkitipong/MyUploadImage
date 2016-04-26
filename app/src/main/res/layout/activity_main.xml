@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg" />
+
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:padding="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/banner"
+        android:padding="120dp"
+        android:layout_above="@+id/fileInfoLayout"
+        android:scaleType="centerCrop"
+        android:src="@drawable/upload_image" />
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/banner"
+        android:padding="100dp"
+        android:layout_above="@+id/fileInfoLayout"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:id="@+id/fileInfoLayout"
+        android:layout_above="@+id/server_client_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dip"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:text="File: "
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/imagename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dip"
+            android:textColor="#F1F1F1"
+            android:text="" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/server_client_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/mobile_icon"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/upload_button_state" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/server_icon"
+            android:layout_toRightOf="@+id/mobile_icon"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/updateStatusTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Please select a photo"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/txt_font"
+                android:textSize="30dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="35dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/server_icon"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/serever_icon" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentBottom="true"
+        android:background="#F3F4EF"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/selectImageInCameraBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_gravity="center_vertical"
+            android:padding="7dp"
+            android:layout_weight="1"
+            android:src="@drawable/camera_button" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#AAAAAA"/>
+
+        <ImageView
+            android:id="@+id/selectImageInGalleryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:padding="7dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/gallery_button" />
+    </LinearLayout>
+
+</RelativeLayout>
